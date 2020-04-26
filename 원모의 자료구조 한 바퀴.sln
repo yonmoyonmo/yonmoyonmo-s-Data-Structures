@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29926.136
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "원모의 자료구조 한 바퀴", "원모의 자료구조 한 바퀴.vcxproj", "{E26B2A15-0003-4E85-B723-F9D5653DEF6F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{E26B2A15-0003-4E85-B723-F9D5653DEF6F}.Debug|x64.ActiveCfg = Debug|x64
+		{E26B2A15-0003-4E85-B723-F9D5653DEF6F}.Debug|x64.Build.0 = Debug|x64
+		{E26B2A15-0003-4E85-B723-F9D5653DEF6F}.Debug|x86.ActiveCfg = Debug|Win32
+		{E26B2A15-0003-4E85-B723-F9D5653DEF6F}.Debug|x86.Build.0 = Debug|Win32
+		{E26B2A15-0003-4E85-B723-F9D5653DEF6F}.Release|x64.ActiveCfg = Release|x64
+		{E26B2A15-0003-4E85-B723-F9D5653DEF6F}.Release|x64.Build.0 = Release|x64
+		{E26B2A15-0003-4E85-B723-F9D5653DEF6F}.Release|x86.ActiveCfg = Release|Win32
+		{E26B2A15-0003-4E85-B723-F9D5653DEF6F}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {919FD931-E984-442C-BA50-0073C8A0D17F}
+	EndGlobalSection
+EndGlobal
