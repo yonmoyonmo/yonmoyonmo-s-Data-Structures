@@ -2,8 +2,6 @@
 #include <string>
 #include <iostream>
 #include <Windows.h>
-
-
 class ListData {
 public:
 	std::string title;
@@ -23,7 +21,6 @@ public:
 		}
 		return *this;
 	}
-
 };
 
 

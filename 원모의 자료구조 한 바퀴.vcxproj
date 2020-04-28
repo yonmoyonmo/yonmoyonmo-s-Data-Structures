@@ -147,13 +147,26 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="ArrayList.cpp" />
-    <ClCompile Include="ListData.cpp" />
-    <ClCompile Include="원모의 자료구조 한 바퀴.cpp" />
+    <ClCompile Include="ArrayList.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="LinkedList.cpp" />
+    <ClCompile Include="LinkedListMain.cpp" />
+    <ClCompile Include="ListData.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClCompile>
+    <ClCompile Include="원모의 자료구조 한 바퀴.cpp">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
-    <ClInclude Include="ArrayList.h" />
-    <ClInclude Include="ListData.h" />
+    <ClInclude Include="ArrayList.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</ExcludedFromBuild>
+    </ClInclude>
+    <ClInclude Include="LinkedList.h" />
+    <ClInclude Include="ListData.h">
+      <ExcludedFromBuild Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</ExcludedFromBuild>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="원모의 자료구조 한 바퀴.rc" />
