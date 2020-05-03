@@ -1,14 +1,15 @@
 #pragma once
 #include <string>
-#include <iostream>
 #include <Windows.h>
+#include <iostream>
 class ListData {
 public:
 	std::string title;
 	std::string desc;
-	ListData();
-	ListData(std::string _title, std::string _desc);
+	ListData() { title = "null"; desc = "null"; }
+	ListData(std::string _title, std::string _desc) :title(_title), desc(_desc) {}
 	
+	friend std::ostream& operator<<(std::ostream& os, const ListData& ref);
 	ListData& operator=(const ListData& right) {
 		try {
 			title = right.title;

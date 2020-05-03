@@ -1,52 +1,52 @@
 #pragma once
 #include <string>
 
+template <typename T>
 class MyStack
 {
+	template <typename T>
 	class StackNode {
 	public:
-		StackNode* bottom;
-		std::string data;
+		StackNode<T>* bottom;
+		T data;
 		StackNode() {
 			bottom = nullptr;
-			data = "null";
 		}
-		StackNode(std::string _data) :data(_data) {
+		StackNode(T _data) :data(_data) {
 			bottom = nullptr;
 		}
 	};
+	template <typename T>
 	class Iterator {
 	public:
-		MyStack::StackNode* top;
+		MyStack::StackNode<T>* top;
 		Iterator() {
 			top = nullptr;
 		}
 	};
-	StackNode* lowest;
-	Iterator iter;
+	StackNode<T>* lowest;
+	Iterator<T> iter;
 public:
 	MyStack() {
-		lowest = new StackNode("Bottom of this ground");
+		lowest = new StackNode<T>();
 		iter.top = lowest;
 	}
-	void push(std::string data) {
-		StackNode* tmp = iter.top;
-		iter.top = new StackNode(data);
+	void push(T data) {
+		StackNode<T>* tmp = iter.top;
+		iter.top = new StackNode<T>(data);
 		iter.top->bottom = tmp;
 	}
 	void peek() {
 		std::cout<<"top of this stack: "<<iter.top->data<<"\n";
 	}
-	std::string pop() {
+	T pop() {
 		if (iter.top->bottom == nullptr) {
 			return iter.top->data;
 		}
-		std::string tmp = iter.top->data;
-		StackNode* temp = iter.top;
+		T tmp = iter.top->data;
+		StackNode<T>* temp = iter.top;
 		iter.top = temp->bottom;
 		delete temp;
 		return tmp;
 	}
-	
-
 };

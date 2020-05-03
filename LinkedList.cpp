@@ -1,3 +1,4 @@
+#pragma once
 #include "LinkedList.h"
 
 void LinkedList::insert(ListData _data)

@@ -1,62 +1,63 @@
 #pragma once
-#include <ctime>
-#include <cstdlib>
-#include "Airplane.h"
-
+template <typename T>
 class MyQueue {
+
+	template <typename T>
 	class QNode {
 	public:
-		QNode* next;
-		Airplane airplane;
+		QNode<T>* next;
+		T data;
 		QNode() {
 			next = nullptr;
 		}
-		QNode(Airplane _airplane) {
+		QNode(T _data) {
 			next = nullptr;
-			airplane = _airplane;
+			data = _data;
 		}
 	};
+
+	template <typename T>
 	class Iterator {
 	public:
-		MyQueue::QNode* front; //데이타가 들어오는 구멍
-		MyQueue::QNode* rear;//데이타가 나가는 구멍
+		MyQueue::QNode<T>* front; //데이타가 들어오는 구멍
+		MyQueue::QNode<T>* rear;//데이타가 나가는 구멍
 		Iterator() {
 			front = nullptr;
 			rear = nullptr;
 		}
 	};
-	Iterator iter;
+	Iterator<T> iter;
 public:
 	MyQueue() {
 	}
-	void enqueue(Airplane airplane) {
+	void enqueue(T data) {
 		if (iter.front == nullptr && iter.rear == nullptr) { //비어있음
-			iter.front = new QNode(airplane);
+			iter.front = new QNode<T>(data);
 			iter.rear = iter.front;
 		}
 		else {
-			iter.front->next = new QNode(airplane);
+			iter.front->next = new QNode<T>(data);
 			iter.front = iter.front->next;
 		}
 	}
-	Airplane dequeue() {
+	T dequeue() {
 		if (iter.front == nullptr && iter.rear == nullptr) { //비어있음
 			std::cout << "EMPTY QUEUE\n";
 		}
 		else if(iter.rear!=nullptr) {
-			QNode* tmp = iter.rear;
-			Airplane ttmp = tmp->airplane;
+			QNode<T>* tmp = iter.rear;
+			T ttmp = tmp->data;
 			iter.rear = iter.rear->next;
 			delete tmp;
 			return ttmp;
 		}else std::cout << "EMPTY QUEUE\n";
 	}
-	Airplane peek() {
+	T peek() {
 		if (iter.front == nullptr && iter.rear == nullptr) { //비어있음
 			std::cout << "EMPTY QUEUE\n";
 		}
 		else if (iter.rear != nullptr) {
-			return iter.rear->airplane;
+			return iter.rear->data;
 		}
 		else std::cout << "EMPTY QUEUE\n";
 	}

@@ -14,7 +14,7 @@ std::string dirtOrGold(int r) {
 	std::string arr[3] = { "dirt", "gold", "dirt" };
 	return arr[r];
 }
-void set(MyStack& ground) {
+void set(MyStack<std::string>& ground) {
 	for (int i = 0; i < 100; i++) {
 		int r = rand() % 3;
 		ground.push(dirtOrGold(r));
@@ -23,7 +23,7 @@ void set(MyStack& ground) {
 }
 int main() {
 	srand((unsigned int)time(NULL));
-	MyStack ground;
+	MyStack<std::string> ground;
 	int choice = 0;
 	int goldCnt = 0;
 	std::string bucket = "null";

@@ -18,9 +18,6 @@
     <ClCompile Include="원모의 자료구조 한 바퀴.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ListData.cpp">
-      <Filter>소스 파일</Filter>
-    </ClCompile>
     <ClCompile Include="ArrayList.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
@@ -34,6 +31,9 @@
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="MyQueueMain.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="LSQmain.cpp">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

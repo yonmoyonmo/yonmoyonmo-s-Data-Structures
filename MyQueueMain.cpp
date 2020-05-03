@@ -7,7 +7,7 @@
 //비행기가 큐(하늘)에서 나와서 큐(대기)로 들어갔다가 큐(활주로)로 들어옴
 //weight에 따라 활주로를 차지하는 시간이 늘어남
 //착륙하는 비행기의 emergency가 10 이하면 어느 활주로든 비어있으면 사용 가능 
-void fillin(MyQueue& pool) {
+void fillin(MyQueue<Airplane>& pool) {
 	for (int i = 0; i < 100; i++) {
 		Airplane air;
 		pool.enqueue(air);
@@ -16,17 +16,17 @@ void fillin(MyQueue& pool) {
 
 int main() {
 	srand((unsigned int)time(NULL));
-	MyQueue landingairplanes;
+	MyQueue<Airplane> landingairplanes;
 	fillin(landingairplanes);
-	MyQueue takeoffairplanes;
+	MyQueue<Airplane> takeoffairplanes;
 	fillin(takeoffairplanes);
 	
-	MyQueue landingwaitingplanes;
-	MyQueue takeoffwaitingplanes;
+	MyQueue<Airplane> landingwaitingplanes;
+	MyQueue<Airplane> takeoffwaitingplanes;
 
-	MyQueue landingone;
-	MyQueue landingtwo;
-	MyQueue takeoffthree;
+	MyQueue<Airplane> landingone;
+	MyQueue<Airplane> landingtwo;
+	MyQueue<Airplane> takeoffthree;
 
 	int onestatus =0;
 	int twostatus=0;
